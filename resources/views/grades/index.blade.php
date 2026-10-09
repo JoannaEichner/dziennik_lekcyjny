@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dziennik lekcyjny - oceny</title>
-</head>
-<body>
-    <h1>Dziennik lekcyjny - oceny</h1>
+@extends('layouts.app')
+
+@section('content')
+
+    <h2>Oceny</h2>
     <p>Przykładowe oceny ucznia:</p>
 
     <table border="1" cellpadding="10">
@@ -30,5 +26,5 @@
     <p>
         <a href="/">Powrót do strony głównej</a>
     </p>
-</body>
-</html>
+
+@endsection
