@@ -71,3 +71,9 @@ th {
 tr:nth-child(even) {
     background-color: #f8fafc;
 }
+
+.error {
+    color: #dc2626;
+    font-size: 14px;
+    margin-top: 5px;
+}
