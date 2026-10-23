@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Oceny ucznia - Dziennik Lekcyjny')
+
 @section('content')
 
     <h2>Oceny</h2>

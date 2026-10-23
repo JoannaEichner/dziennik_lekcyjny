@@ -77,3 +77,24 @@ tr:nth-child(even) {
     font-size: 14px;
     margin-top: 5px;
 }
+
+
+nav form {
+    display: inline;
+}
+
+nav .nav-link {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: white;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+nav .nav-link:hover {
+    text-decoration: underline;
+}
+

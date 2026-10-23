@@ -13,18 +13,13 @@
             <label for="subject">Przedmiot:</label>
             <select id="subject" name="subject">
                 <option value="">-- Wybierz przedmiot --</option>
-                <option value="Matematyka"
-                    @selected(old('subject') == 'Matematyka')>
-                    Matematyka
-                </option>
-                <option value="Język polski"
-                    @selected(old('subject') == 'Język polski')>
-                    Język polski
-                </option>
-                <option value="Informatyka"
-                    @selected(old('subject') == 'Informatyka')>
-                    Informatyka
-                </option>
+                
+                @foreach ($subjects as $subject)
+                    <option value="{{ $subject->name }}"
+                        @selected(old('subject') == $subject->name)>
+                        {{ $subject->name }}
+                    </option>
+                @endforeach
             </select>
 
             @error('subject')

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\View\View;
 use Illuminate\Http\Request;
+use App\Models\Subject;
 
 class GradeController extends Controller
 {
@@ -33,7 +34,11 @@ class GradeController extends Controller
     
     public function create(): View
     {
-        return view('grades.create');
+        $subjects = Subject::orderBy('name')->get();
+
+        return view('grades.create',[
+            'subjects' => $subjects,
+        ]);
     }
 
     public function store(Request $request)
