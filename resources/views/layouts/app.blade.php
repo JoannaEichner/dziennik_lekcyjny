@@ -14,6 +14,11 @@
             <a href="/">Strona główna</a>
             <a href="/grades">Oceny</a>
             @auth
+                @if (in_array(Auth::user()->role, ['teacher', 'admin']))
+                    <a href="{{ route('grades.create') }}">Dodaj ocenę</a>
+                @endif
+            @endauth
+            @auth
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button type="submit" class="nav-link">Wyloguj się</button>
