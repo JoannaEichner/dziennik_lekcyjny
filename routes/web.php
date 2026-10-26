@@ -7,12 +7,15 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/grades',[GradeController::class, 'index']);
+Route::get('/grades',[GradeController::class, 'index'])
+    ->middleware('auth');
 
 Route::get('/grades/create', [GradeController::class, 'create'])
+    ->middleware(['auth', 'role:teacher,admin'])
     ->name('grades.create');
 
 Route::post('/grades', [GradeController::class, 'store'])
+    ->middleware(['auth', 'role:teacher,admin'])
     ->name('grades.store');
 
 Route::get('/login', [AuthController::class, 'showLogin'])
